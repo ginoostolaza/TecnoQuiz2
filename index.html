@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoQuiz - Plataforma de Aprendizaje</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sección de bienvenida -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="logo-title">TecnoQuiz</h1>
+                <p class="subtitle">Aprende de forma entretenida y eficaz</p>
+                <div class="decorative-element"></div>
+            </div>
+        </section>
+
+        <!-- Selector de rol -->
+        <section class="role-selector">
+            <div class="role-buttons">
+                <button class="role-btn" id="alumnoBtn" data-role="alumno">
+                    <span class="role-icon">👨‍🎓</span>
+                    <span>Soy Alumno</span>
+                </button>
+                <button class="role-btn" id="profesorBtn" data-role="profesor">
+                    <span class="role-icon">👨‍🏫</span>
+                    <span>Soy Profesor</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Formulario de login/registro para alumnos -->
+        <section class="auth-section" id="alumnoAuth" style="display: none;">
+            <div class="form-container">
+                <h2>Ingresar como Alumno</h2>
+                <form id="alumnoForm">
+                    <div class="form-group">
+                        <label for="alumnoNombre">Nombre y Apellido</label>
+                        <input type="text" id="alumnoNombre" placeholder="Ej: Juan Pérez" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="alumnoCurso">Curso</label>
+                        <select id="alumnoCurso" required>
+                            <option value="">Selecciona tu curso</option>
+                            <option value="1">1° año</option>
+                            <option value="2">2° año</option>
+                            <option value="3">3° año</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="alumnoEmail">Email</label>
+                        <input type="email" id="alumnoEmail" placeholder="tu@email.com" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Continuar</button>
+                </form>
+                <button class="btn-back" onclick="volver()">← Volver</button>
+            </div>
+        </section>
+
+        <!-- Formulario de login/registro para profesores -->
+        <section class="auth-section" id="profesorAuth" style="display: none;">
+            <div class="form-container">
+                <h2>Ingresar como Profesor</h2>
+                <form id="profesorForm">
+                    <div class="form-group">
+                        <label for="profesorNombre">Nombre y Apellido</label>
+                        <input type="text" id="profesorNombre" placeholder="Ej: Carlos García" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profesorMateria">Materia</label>
+                        <input type="text" id="profesorMateria" placeholder="Ej: Matemática" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profesorEmail">Email</label>
+                        <input type="email" id="profesorEmail" placeholder="tu@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profesorPassword">Contraseña</label>
+                        <input type="password" id="profesorPassword" placeholder="Mínimo 6 caracteres" required>
+                    </div>
+                    <button type="submit" class="btn-submit">Continuar</button>
+                </form>
+                <button class="btn-back" onclick="volver()">← Volver</button>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TecnoQuiz - Panel Alumno</title>
+    <link rel="stylesheet" href="panel.css">
+    <meta name="description" content="Panel de alumno - TecnoQuiz">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <h1 class="nav-title">TecnoQuiz</h1>
+            <div class="nav-info">
+                <span id="usuarioNombre"></span>
+                <button class="btn-logout" onclick="cerrarSesion()">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- SECCIÓN DE BIENVENIDA -->
+        <section class="welcome-section">
+            <h2>Bienvenido, <span id="nombreAlumno"></span></h2>
+            <p>Selecciona una dificultad y comienza a jugar</p>
+        </section>
+
+        <!-- Contenido... (igual que el original) -->
+    </div>
+
+    <!-- MODAL Y OTROS ELEMENTOS -->
+
+    <script src="script-alumno.js"></script>
+</body>
+</html>
